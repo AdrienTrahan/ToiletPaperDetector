@@ -60,6 +60,10 @@ async function predict() {
 function showToiletPaperAlert(){
   isShown = true;
   $(document.body).append("<div class='flexingAlert'>You can flex bro! 🧻🧻</div>")
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+
+   $(".flexingAlert")[0].style.fontSize = "54px";
+  }
   $( ".flexingAlert" ).animate({
     bottom: "+=120"
   }, 500, function() {
@@ -72,4 +76,9 @@ function hideToiletPaperAlert(){
   }, 500, function() {
     $( ".flexingAlert" ).remove();
   });
+}
+
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+ $(document.body).append("<div class='errorAlert'>Hey!<br>Je vois que tu es sur un 📱! <br> Le layout est vraiment 🤮🤮alors va sur ton ordi! 💻<br><br> Avec Insta ou Facebook, la webcam est 🚫, alors va dans ton navigateur par défaut.<button onclick='$( \".errorAlert\" ).remove();'>je suis un thug, je veux continuer</button></div>");
+ $(".title")[0].style.fontSize = "54px";
 }
