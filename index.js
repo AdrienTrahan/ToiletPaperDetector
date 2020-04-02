@@ -77,8 +77,10 @@ function hideToiletPaperAlert(){
     $( ".flexingAlert" ).remove();
   });
 }
-
-if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+if (/iPhone|iPad|iPod/i.test(navigator.userAgent) ){
+  $(document.body).append("<div class='errorAlert'>Hey!<br>Je vois que tu es sur un appareil mobile apple📱! <br> La webcam n'est pas compatible . Essaye d'aller sur ton 💻</div>");
+  $(".title")[0].style.fontSize = "54px";
+}else if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
  $(document.body).append("<div class='errorAlert'>Hey!<br>Je vois que tu es sur un 📱! <br> Le layout est vraiment 🤮🤮alors va sur ton ordi! 💻<br><br> Avec Insta ou Facebook, la webcam est 🚫, alors va dans ton navigateur par défaut.<button onclick='$( \".errorAlert\" ).remove();'>je suis un thug, je veux continuer</button></div>");
  $(".title")[0].style.fontSize = "54px";
 }
