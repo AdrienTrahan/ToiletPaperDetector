@@ -85,3 +85,34 @@ body, html{
   text-align: center;
   font-family: 'Poppins', sans-serif;
 }
+.errorAlert{
+  position: absolute;
+  bottom: 25px;
+  height: calc(100% - 50px);
+  width: calc(100% - 50px);
+  left: 25px;
+  background-color: #ff5964;
+  color: white;
+  padding: 15px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  font-size: 64px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  padding-top: 20%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.errorAlert button{
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  width: calc(100% - 50px);
+  background-color: white;
+  border-radius: 10px;
+  height: 150px;
+  font-size: 35px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
